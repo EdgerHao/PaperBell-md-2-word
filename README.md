@@ -4,7 +4,7 @@
 
 [![PaperBell](https://img.shields.io/badge/PaperBell-SubProject-blue)](https://github.com/PaperBell-Org/Obsidian-PaperBell)
 [![Pandoc](https://img.shields.io/badge/Pandoc-3.x-orange)](https://pandoc.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: MIT](4-成果/学习AI/zotero-fig-extractor%201/node_modules/ms/license.md)
 
 ## 为什么需要这个项目？
 
@@ -191,7 +191,7 @@ git clone https://github.com/EdgerHao/PaperBell-md-2-word.git
 
 ## 许可证
 
-[MIT License](LICENSE)
+[MIT License](4-成果/学习AI/zotero-fig-extractor%201/node_modules/ms/license.md)
 
 - Lua 过滤器：MIT
 - VBA 宏代码：MIT
