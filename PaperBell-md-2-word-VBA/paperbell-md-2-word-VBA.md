@@ -24,7 +24,7 @@ Sub PaperBell_MD2Word_VBA()
           "5. Zotero 引用变蓝" & vbCrLf & _
           "   (将所有 Zotero 引文域设置为蓝色)" & vbCrLf & vbCrLf & _
           "6. MD表格一键规整三线表" & vbCrLf & _
-          "   (标准三线表、五号字、居中对齐、适配页边距)" & vbCrLf & vbCrLf & _
+          "   (标准三线表、中文宋体/英文数字TNR、五号字、居中)" & vbCrLf & vbCrLf & _
           "7. 精确空格与引号字体修复" & vbCrLf & _
           "   (关闭亚洲自动间距 | 清除NBSP/全角空格等特殊字符 | 引号字体统一宋体)" & vbCrLf & vbCrLf & _
           "0. 执行所有功能 (1 + 2 + 3 + 4 + 5 + 6 + 7)" & vbCrLf & vbCrLf & _
@@ -321,9 +321,13 @@ Sub Module_ThreeLineTable()
             .LineWidth = wdLineWidth150pt
         End With
 
-        ' 4. 全表格字体：五号字、宋体
-        tbl.Range.Font.Name = "宋体"
-        tbl.Range.Font.Size = 10.5 ' 五号字对应10.5磅
+        ' 4. 全表格字体：中文宋体，英文/数字 Times New Roman，五号字
+        With tbl.Range.Font
+            .NameFarEast = "宋体"          ' 中文字体
+            .NameAscii = "Times New Roman" ' 英文和数字字体
+            .Name = "Times New Roman"      ' 默认字体（兜底）
+            .Size = 10.5                   ' 五号字对应10.5磅
+        End With
 
         ' 5. 所有单元格 水平居中 + 垂直居中
         For Each row In tbl.Rows
